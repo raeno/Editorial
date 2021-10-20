@@ -15,7 +15,7 @@ into the {body} of the default.hbs template --}}
                 </header>
                 <p>{{excerpt words="42"}}</p>
                 <ul class="actions">
-                    <li><a href="{{url}}" class="button big">Learn More</a></li>
+                    <li><a href="{{url}}" class="button big">Читать дальше</a></li>
                 </ul>
             </div>
             {{#if feature_image}}
@@ -32,21 +32,12 @@ into the {body} of the default.hbs template --}}
 <section>
 
     <header class="major">
-        <h2>Recent posts</h2>
+        <h2>Последние записи</h2>
     </header>
 
     <section class="posts">
         {{#foreach posts}}
-        <article>
-            {{#if feature_image}}
-            <a href="{{url}}" class="image fit"><img src="{{img_url feature_image}}" alt="{{title}}" /></a>
-            {{/if}}
-            <h3><a href="{{url}}">{{title}}</a></h3>
-            <p>{{excerpt words="33"}}</p>
-            <ul class="actions special">
-                <li><a href="{{url}}" class="button">Full Story</a></li>
-            </ul>
-        </article>
+            {{> "post-card"}}
         {{/foreach}}
     </section>
 
