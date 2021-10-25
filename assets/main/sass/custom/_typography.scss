@@ -1,0 +1,14 @@
+// bump font size everywhere
+body, input, select, textarea {
+    @include breakpoint('<=xlarge') {
+        font-size: 13pt;
+    }
+
+    @include breakpoint('<=large') {
+        font-size: 13pt;
+    }
+
+    @include breakpoint('<=xxsmall') {
+        font-size: 13pt;
+    }
+}
